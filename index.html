@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Confirmação</title>
+  <title>Confirmação - APUB BH</title>
 
   <style>
     /* Mobile First */
@@ -16,7 +16,7 @@
 
     body {
       min-height: 100vh;
-      background: linear-gradient(135deg, #4f46e5, #6366f1);
+      background: linear-gradient(135deg, #b11217, #8f0f14);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -25,35 +25,58 @@
     }
 
     .card {
-      background: rgba(255, 255, 255, 0.15);
-      backdrop-filter: blur(10px);
-      border-radius: 16px;
+      background: #ffffff;
+      border-radius: 18px;
       padding: 32px 24px;
       text-align: center;
       width: 100%;
       max-width: 360px;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+      position: relative;
+    }
+
+    .card::before {
+      content: "APUB • BH";
+      position: absolute;
+      top: -14px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #b11217;
+      color: #fff;
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
     }
 
     .icon {
-      font-size: 48px;
+      font-size: 52px;
       margin-bottom: 16px;
     }
 
     h1 {
-      font-size: 1.6rem;
-      margin-bottom: 12px;
+      font-size: 1.5rem;
+      margin-bottom: 8px;
+      color: #b11217;
     }
 
     p {
-      font-size: 1.2rem;
-      opacity: 0.95;
+      font-size: 1.1rem;
+      color: #333;
     }
 
     .nome {
       font-weight: 600;
-      margin-top: 8px;
+      margin-top: 6px;
       display: block;
+      color: #000;
+    }
+
+    .footer {
+      margin-top: 20px;
+      font-size: 0.8rem;
+      color: #666;
     }
   </style>
 </head>
@@ -62,6 +85,10 @@
     <div class="icon">✅</div>
     <h1>Confirmado, professor</h1>
     <p class="nome" id="nomeProfessor"></p>
+
+    <div class="footer">
+      Portal do Professor • APUB BH
+    </div>
   </div>
 
   <script>
@@ -73,4 +100,3 @@
   </script>
 </body>
 </html>
-
